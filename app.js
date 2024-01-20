@@ -65,6 +65,8 @@ function verificarNumero() {
     if (numeroDeUsuario === numeroSecreto) {
         //si el usuario adivina
         asignarTextoElemento('p', `Acertaste el numero en ${intentos} ${(intentos == 1) ? 'vez' : 'veces'}!`);
+        document.getElementById('reiniciar').removeAttribute('disabled');
+        document.getElementById('intentar').setAttribute('disabled', 'true');
     } else {
         //si el usuario falla
         if (numeroDeUsuario > numeroSecreto) {
